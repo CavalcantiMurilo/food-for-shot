@@ -1,0 +1,28 @@
+nav{
+  border-bottom: 1px solid #5c5a5a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo img{
+  width: 60px;
+  margin: 5px 0 5px 30px;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  padding: 15px 1px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+nav ul li{
+  padding-right: 50px;
+}
+
+nav ul li a:hover{
+  color: black
+}
