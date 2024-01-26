@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-forms',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './forms.component.css'
 })
 export class FormsComponent {
+  @Input btnText: string
 
 }
