@@ -6,6 +6,6 @@ import {Component, Input} from '@angular/core';
   styleUrl: './forms.component.css'
 })
 export class FormsComponent {
-  @Input btnText: string
+  @Input() btnText!: string;
 
 }

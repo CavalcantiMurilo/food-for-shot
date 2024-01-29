@@ -1,0 +1,13 @@
+h2{
+  display: flex;
+  justify-content: center;
+  gap: .3em;
+  margin-top: 15px;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+span{
+  color: #b07424;
+  font-weight: 700;
+}

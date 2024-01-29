@@ -3,7 +3,7 @@
 
 *{
   padding: 0;
-  margin: 0%;
+  margin: 0;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -12,3 +12,56 @@ a{
   color: #5c5a5a;
   transition: 0.4s;
 }
+
+/*Estilo Formulário*/
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin: 20px;
+}
+
+.form-group{
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border: 1px solid #5c5a5a;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+label{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+form input{
+  padding: 10px;
+  font-size: 1em;
+}
+
+form input[type="text"]{
+  padding: 10px;
+  font-size: 1em;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style: none;
+}
+
+form input[type="submit"]{
+  border-radius: 10px;
+  border: none;
+  font-size: 1.3em;
+  font-weight: 500;
+  background-color: #b07424;
+  color: white;
+  cursor: pointer;
+  transition: .4s;
+}
+
+form input[type="submit"]:hover{
+  font-size: 1.4em;
+}
+

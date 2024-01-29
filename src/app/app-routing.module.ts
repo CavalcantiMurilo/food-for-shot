@@ -7,7 +7,7 @@ import {AddFoodComponent} from "./components/pages/add-food/add-food.component";
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'sobre', component: SobreComponent},
-  {path: 'foods/nova', component: AddFoodComponent}
+  {path: 'foods/add', component: AddFoodComponent}
 ];
 
 @NgModule({

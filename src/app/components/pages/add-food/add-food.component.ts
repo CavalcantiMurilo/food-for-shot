@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './add-food.component.css'
 })
 export class AddFoodComponent {
-
+  btnText = "Compartilhar"
 }
