@@ -11,6 +11,8 @@ import { SobreComponent } from './components/pages/sobre/sobre.component';
 import { HomeComponent } from './components/pages/home/home.component';
 import { AddFoodComponent } from './components/pages/add-food/add-food.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { MessagesComponent } from './components/messages/messages.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -20,14 +22,16 @@ import { FormsComponent } from './components/forms/forms.component';
     SobreComponent,
     HomeComponent,
     AddFoodComponent,
-    FormsComponent
+    FormsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

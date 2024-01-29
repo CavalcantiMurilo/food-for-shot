@@ -1,0 +1,10 @@
+.message{
+  position: fixed;
+  z-index: 100;
+  border: 1px solid #9a9a9a;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+}
