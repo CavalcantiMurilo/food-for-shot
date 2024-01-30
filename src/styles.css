@@ -63,7 +63,7 @@ form input[type="submit"]{
 }
 
 form input[type="submit"]:hover{
-  font-size: 1.4em;
+  background-color: #d79544;
 }
 
 .validacao-erro{

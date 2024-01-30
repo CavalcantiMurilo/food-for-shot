@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 
-import {faTimes} from '@fortawesome/free-solid-svg-icons'
+import {faTimes} from '@fortawesome/free-solid-svg-icons';
+
+import {MessagesService} from "../../services/messages.service";
 
 @Component({
   selector: 'app-messages',
@@ -11,4 +13,9 @@ export class MessagesComponent {
 
   faTimes = faTimes;
 
+  constructor(public messagesService: MessagesService){
+
+  }
+
+  protected readonly MessagesService = MessagesService;
 }

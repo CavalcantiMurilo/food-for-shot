@@ -3,8 +3,36 @@
   z-index: 100;
   border: 1px solid #9a9a9a;
   border-radius: 10px;
+  background-color: #f8f8f8;
+  width: 50%;
+  margin-left: 50%;
+  left: -25%;
+  top: 3em;
+  padding: 1.5em;
   display: flex;
   flex-direction: column;
-  width: 50%;
+}
 
+.message-header{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5em;
+}
+
+.message-header button{
+  padding: .1em .8em;
+  cursor: pointer;
+  border-style: none;
+  border-radius: 10px;
+  background-color: #b07424;
+  color: white;
+  font-size: 1em;
+}
+
+.message-header button:hover{
+  background-color: #d79544;
+}
+
+.message p{
+  font-size: 1.3em;
 }

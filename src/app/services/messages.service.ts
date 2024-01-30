@@ -1,9 +1,25 @@
 import { Injectable } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessagesService {
 
-  constructor() { }
+  message: string = '';
+
+  constructor(private router: Router) { }
+
+
+  clear(){
+    this.message = '';
+    this.router.navigate(['/']);
+  }
+  add(message: string){
+    this.message = message;
+
+    setTimeout(() =>{
+      this.clear();
+    }, 4000)
+  }
 }

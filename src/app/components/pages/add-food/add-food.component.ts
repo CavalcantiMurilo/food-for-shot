@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {Food} from "../../../Food";
-
 import {FoodService} from "../../../services/food.service";
+import {MessagesService} from "../../../services/messages.service";
 
 @Component({
   selector: 'app-add-food',
@@ -12,7 +12,7 @@ import {FoodService} from "../../../services/food.service";
 export class AddFoodComponent {
   btnText = "Compartilhar"
 
-  constructor(private foodService: FoodService){
+  constructor(private foodService: FoodService, private messagesService: MessagesService){
 
   }
 
@@ -27,6 +27,10 @@ export class AddFoodComponent {
     formData.append('image', food.image);
 
     await this.foodService.createFood(formData).subscribe();
+
+    this.messagesService.add("Prato adicionado e pronto para ser apreciadooo!")
+
+
   }
 
 }
