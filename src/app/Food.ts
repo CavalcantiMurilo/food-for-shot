@@ -5,5 +5,5 @@ export interface Food{
   image: string;
   created_at?: string;
   updated_at?: string;
-  comments?: [{text: string, user: string}];
+  comments?: [{text: string, username: string}];
 }

@@ -16,16 +16,16 @@ export class FormsComponent implements OnInit{
   ngOnInit(): void {
     this.forms = new FormGroup({
       id: new FormControl(''),
-      title: new FormControl('', Validators.required),
-      description: new FormControl('', Validators.required),
-      image: new FormControl('')
+      title: new FormControl('', [Validators.required]),
+      description: new FormControl('', [Validators.required]),
+      image: new FormControl('', [Validators.required])
     });
   }
 
   submit() {
 
     if (this.forms.invalid) {
-      console.log("Não deu");
+      //Retorna ele mesmo e não envia os dados
       return;
     }
 

@@ -1,0 +1,45 @@
+.destaque{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3em
+}
+
+h2{
+  font-size: 2.4em;
+  font-weight: 600;
+}
+
+span{
+  color: #b07424;
+  font-weight: 700;
+}
+
+.destaque p{
+  font-size: 1.6em;
+  padding-top: 1em;
+  font-weight: 500;
+}
+
+.descricao{
+  text-align: center;
+  font-size: 1.4em;
+  padding: 1em 15em;
+}
+
+.link{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: underline;
+  padding: 2em;
+
+}
+
+.link a{
+  color: #363636;
+}
+
+.link a:hover{
+  color: #b07424;
+}

@@ -1,1 +1,37 @@
-<p>home works!</p>
+<div class="home-container">
+  <h1>Veja o que está sendo apreciado</h1>
+
+  <div class="search-container">
+    <form>
+      <fa-icon [icon]="faSearch"></fa-icon>
+    </form>
+  </div>
+
+  <div *ngIf="foods.length > 0; else noFood">
+    <div class="foods-container">
+      <div class="food" *ngFor="let food of foods">
+
+        <h3>{{ food.title }}</h3>
+
+        <div class="image">
+          <img src="{{baseApiUrl}}uploads/{{food.image}}" alt="{{food.title}}">
+        </div>
+
+        <p class="description">{{ food.description }}</p>
+
+        <p class="date">publicado em: {{ food.updated_at }}</p>
+
+        <p class="comments">Comentários: {{ food.comments!.length }}</p>
+
+        <a routerLink="/foods/{{food.id}}">Ver mais</a>
+
+
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noFood> <!--Usado para exibições que não são default-->
+    <h1>Ainda não há pratos para serem apreciados :(</h1>
+  </ng-template>
+
+</div>

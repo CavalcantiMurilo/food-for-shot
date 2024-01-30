@@ -28,7 +28,7 @@ export class AddFoodComponent {
 
     await this.foodService.createFood(formData).subscribe();
 
-    this.messagesService.add("Prato adicionado e pronto para ser apreciadooo!")
+    this.messagesService.add("Prato adicionado e pronto para ser apreciado!")
 
 
   }

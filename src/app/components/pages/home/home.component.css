@@ -1,0 +1,62 @@
+.home-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-container h1{
+  font-weight: 500;
+  padding: 1em 0;
+  text-align: center;
+}
+
+.foods-container{
+  display: grid;
+  grid-template-columns: 20em 20em 20em ;
+  align-content: center;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.food{
+  border: 1px solid grey;
+  /*box-shadow: 7px 5px 5px 5px rgba(0,0,0,0.2);*/
+  padding: 1em;
+  border-radius: 10px;
+}
+
+.food h3{
+  padding-bottom: 1em;
+}
+
+.food .image{
+  width: 18em;
+  height: 18em;
+  background-color: #b07424;
+  border-radius: 5px;
+
+}
+
+.food .image img{
+  width:18em;
+  height:18em;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.food .description{
+  padding: 1em 0;
+}
+
+.food .date{
+  font-weight: 200;
+}
+
+.food .comments{
+  padding-bottom: 1em;
+  font-weight: 300;
+}
+
+
+
