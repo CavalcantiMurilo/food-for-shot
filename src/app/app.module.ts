@@ -13,6 +13,7 @@ import { AddFoodComponent } from './components/pages/add-food/add-food.component
 import { FormsComponent } from './components/forms/forms.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FoodComponent } from './components/pages/food/food.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     HomeComponent,
     AddFoodComponent,
     FormsComponent,
-    MessagesComponent
+    MessagesComponent,
+    FoodComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@
   <div class="search-container">
     <form>
       <fa-icon [icon]="faSearch"></fa-icon>
+      <input type="text" placeholder="Busque um prato" (input)="search($event)">
     </form>
   </div>
 
@@ -17,11 +18,11 @@
           <img src="{{baseApiUrl}}uploads/{{food.image}}" alt="{{food.title}}">
         </div>
 
-        <p class="description">{{ food.description }}</p>
+
 
         <p class="date">publicado em: {{ food.updated_at }}</p>
 
-        <p class="comments">Comentários: {{ food.comments!.length }}</p>
+        <p class="comments">Comentários: {{food.comments!.length }}</p>
 
         <a routerLink="/foods/{{food.id}}">Ver mais</a>
 

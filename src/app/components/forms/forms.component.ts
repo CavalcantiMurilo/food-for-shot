@@ -18,8 +18,14 @@ export class FormsComponent implements OnInit{
       id: new FormControl(''),
       title: new FormControl('', [Validators.required]),
       description: new FormControl('', [Validators.required]),
-      image: new FormControl('', [Validators.required])
+      image: new FormControl('', [Validators.required]),
     });
+  }
+
+  onFileSelected(event: any){
+    const file: File = event.target.files[0];
+
+    this.forms.patchValue({image: file});
   }
 
   submit() {
@@ -34,23 +40,14 @@ export class FormsComponent implements OnInit{
     this.onSubmit.emit(this.forms.value);
   }
 
-  onFileSelected(event: any){
-    const file: File = event.target.files[0];
-
-    this.forms.patchValue({image: file});
-  }
-
-  // @ts-ignore
   get title() {
     return this.forms.get('title')!;
   }
 
-  // @ts-ignore
   get description() {
     return this.forms.get('description')!;
   }
 
-  // @ts-ignore
   get image(){
     return this.forms.get('image')!;
   }

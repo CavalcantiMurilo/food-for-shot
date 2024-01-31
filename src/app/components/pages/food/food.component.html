@@ -1,0 +1,24 @@
+<div class="food">
+  <h1>{{ food?.title }}</h1>
+  <div class="food-container">
+
+    <img src="{{baseApiUrl}}uploads/{{food?.image}}" alt="{{food?.title}}">
+
+    <div class="sobre-food">
+      <h3>Sobre esse prato:</h3>
+      <p>{{ food?.description }}</p>
+    </div>
+  </div>
+
+  <div class="actions">
+    <a routerLink="/foods/edit/{{food?.id}}">
+      <fa-icon [icon]="faEdit"></fa-icon>
+      Editar
+    </a>
+
+    <button class="rm-btn">
+      <fa-icon [icon]="faTimes"></fa-icon>
+      Excluir
+    </button>
+  </div>
+</div>

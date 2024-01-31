@@ -13,7 +13,6 @@ export class MessagesService {
 
   clear(){
     this.message = '';
-    this.router.navigate(['/']);
   }
   add(message: string){
     this.message = message;

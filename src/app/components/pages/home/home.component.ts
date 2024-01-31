@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
   }
 
   faSearch = faSearch;
-  searchItem: string = '';
+  searchTerm: string = '';
 
   allFoods: Food[] = []; //para o banco
   foods: Food[] = [] //para ler dados na busca
@@ -30,9 +30,20 @@ export class HomeComponent implements OnInit{
         item.created_at = new Date(item.created_at!).toLocaleDateString('pt-BR');
         item.updated_at = new Date(item.updated_at!).toLocaleDateString('pt-BR');
       })
+
       this.allFoods = data;
       this.foods = data
     })
+  }
+
+  search(e: Event){
+
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.foods = this.allFoods.filter((food) =>
+      food.title.toLowerCase().includes(value)
+    );
   }
 
 }

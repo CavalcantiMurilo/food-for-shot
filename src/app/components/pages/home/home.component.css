@@ -1,36 +1,44 @@
-.home-container{
+.home-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.home-container h1{
+.home-container h1 {
   font-weight: 500;
   padding: 1em 0;
   text-align: center;
 }
 
-.foods-container{
+.foods-container {
   display: grid;
-  grid-template-columns: 20em 20em 20em ;
+  grid-template-columns: 20em 20em 20em;
   align-content: center;
   justify-content: center;
   gap: 50px;
   padding-bottom: 50px;
 }
 
-.food{
+.food {
   border: 1px solid grey;
   /*box-shadow: 7px 5px 5px 5px rgba(0,0,0,0.2);*/
   padding: 1em;
   border-radius: 10px;
 }
 
-.food h3{
+.food a{
+  font-weight: 500;
+}
+
+.food a:hover{
+  color: #b07424;
+}
+
+.food h3 {
   padding-bottom: 1em;
 }
 
-.food .image{
+.food .image {
   width: 18em;
   height: 18em;
   background-color: #b07424;
@@ -38,24 +46,45 @@
 
 }
 
-.food .image img{
-  width:18em;
-  height:18em;
+.food .image img {
+  width: 18em;
+  height: 18em;
   object-fit: cover;
   border-radius: 5px;
 }
 
-.food .description{
-  padding: 1em 0;
-}
-
-.food .date{
+.food .date {
   font-weight: 200;
+  padding-top: 1.5em;
 }
 
-.food .comments{
+.food .comments {
   padding-bottom: 1em;
   font-weight: 300;
+}
+
+.search-container {
+  margin-bottom: 2em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container form {
+  width: 30%;
+  position: relative;
+}
+
+.search-container fa-icon {
+  position: absolute;
+  top: 8px;
+  left: 8px
+}
+
+.search-container input{
+  padding: 0.5em;
+  width:100%;
+  text-align: center;
 }
 
 

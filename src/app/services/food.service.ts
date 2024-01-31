@@ -18,6 +18,11 @@ export class FoodService {
     return this.http.get<Response<Food[]>>(this.apiUrl)
   }
 
+  getThisFood(id: number): Observable<Response<Food>>{
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.get<Response<Food>>(url)
+  }
+
 
   createFood(formData: FormData): Observable<FormData>{
     return this.http.post<FormData>(this.apiUrl, formData);

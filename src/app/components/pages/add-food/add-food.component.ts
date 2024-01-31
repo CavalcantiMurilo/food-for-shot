@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {Food} from "../../../Food";
 import {FoodService} from "../../../services/food.service";
 import {MessagesService} from "../../../services/messages.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-add-food',
@@ -9,10 +10,11 @@ import {MessagesService} from "../../../services/messages.service";
   styleUrl: './add-food.component.css'
 })
 
+
 export class AddFoodComponent {
   btnText = "Compartilhar"
 
-  constructor(private foodService: FoodService, private messagesService: MessagesService){
+  constructor(private foodService: FoodService, private messagesService: MessagesService, private router: Router){
 
   }
 
@@ -29,6 +31,8 @@ export class AddFoodComponent {
     await this.foodService.createFood(formData).subscribe();
 
     this.messagesService.add("Prato adicionado e pronto para ser apreciado!")
+
+    this.router.navigate(['/']);
 
 
   }
