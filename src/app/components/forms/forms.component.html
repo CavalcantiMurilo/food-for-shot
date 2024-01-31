@@ -1,4 +1,5 @@
 <form (ngSubmit)="submit()" [formGroup]="forms" #formDir="ngForm">
+  <input type="hidden" formControlName="id">
 
   <div class="form-group">
     <label for="titulo">Qual o nome desse prato?</label>
@@ -19,12 +20,10 @@
 
   <div class="form-group">
     <label for="imagem">Compartilhe a foto que mais representa seu prato!</label>
-    <input type="file" id="imagem" required formControlName="image" (change)="onFileSelected($event)"/>
-
+    <input type="file" id="imagem" required (change)="onFileSelected($event)"/>
     <div *ngIf="image.invalid && formDir.submitted" class="validacao-erro">
-      As pessoas querem ver como ficou o resultado!
+      Mostre como ficou o resultado!
     </div>
-
   </div>
 
   <input type="submit" value="{{btnText}}">

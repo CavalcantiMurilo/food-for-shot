@@ -14,6 +14,7 @@ import { FormsComponent } from './components/forms/forms.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FoodComponent } from './components/pages/food/food.component';
+import { EditFoodComponent } from './components/pages/edit-food/edit-food.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FoodComponent } from './components/pages/food/food.component';
     AddFoodComponent,
     FormsComponent,
     MessagesComponent,
-    FoodComponent
+    FoodComponent,
+    EditFoodComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,7 @@
+<div *ngIf="food">
+  <h2>
+    Editando o prato: <span>{{food.title}}</span>
+  </h2>
+
+  <app-forms btnText="{{btnText}}" [foodData]="food" (onSubmit)="editHandler($event)"></app-forms>
+</div>

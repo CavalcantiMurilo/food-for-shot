@@ -10,14 +10,16 @@ import {Food} from "../../Food";
 export class FormsComponent implements OnInit{
   @Output() onSubmit = new EventEmitter<Food>();
   @Input() btnText!: string;
+  @Input() foodData: Food | null = null;
 
   forms!: FormGroup;
 
+
   ngOnInit(): void {
     this.forms = new FormGroup({
-      id: new FormControl(''),
-      title: new FormControl('', [Validators.required]),
-      description: new FormControl('', [Validators.required]),
+      id: new FormControl(this.foodData ? this.foodData.id : ''),
+      title: new FormControl(this.foodData ? this.foodData.title : '', [Validators.required]),
+      description: new FormControl(this.foodData ? this.foodData.description : '', [Validators.required]),
       image: new FormControl('', [Validators.required]),
     });
   }
@@ -25,7 +27,10 @@ export class FormsComponent implements OnInit{
   onFileSelected(event: any){
     const file: File = event.target.files[0];
 
-    this.forms.patchValue({image: file});
+    this.forms.get('image')?.setValue(file);
+
+
+
   }
 
   submit() {
@@ -48,7 +53,8 @@ export class FormsComponent implements OnInit{
     return this.forms.get('description')!;
   }
 
-  get image(){
+  get image() {
     return this.forms.get('image')!;
   }
+
 }
