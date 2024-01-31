@@ -21,4 +21,49 @@
       Excluir
     </button>
   </div>
+
+  <div class="comments">
+    <h3 class="titulo">Comentários ({{ food?.comments!.length > 0 ? food?.comments?.length : 0 }})</h3>
+
+    <div *ngIf="food?.comments!.length > 0; else noComments">
+
+      <div class="comment-container" *ngFor="let comment of food?.comments">
+        <p class="comment-text">{{ comment.text }}</p>
+        <h3 class="comment-username">{{ comment.username }}</h3>
+      </div>
+
+    </div>
+
+    <ng-template #noComments>
+      <p>Ainda não existem comentários</p>
+    </ng-template>
+  </div>
+
+  <div class="comment-form">
+    <h3>Fale sobre o prato</h3>
+
+    <form [formGroup]="commentForm" #formDir="ngForm" (ngSubmit)="onSubmit(formDir)">
+
+      <div class="form-group">
+        <label for="text">Comentário:</label>
+        <textarea formControlName="text" placeholder="O que achou do prato?" required id="text"></textarea>
+        <div *ngIf="text.invalid && formDir.submitted" class="validacao-erro">
+          O texto é obrigatório!
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <label for="author">Autor(a):</label>
+        <input type="text" formControlName="username" id="author" placeholder="Digite seu nome"/>
+        <div *ngIf="username.invalid && formDir.submitted" class="validacao-erro">
+          Digite o seu nome!
+        </div>
+      </div>
+
+
+      <input type="submit" value="Comentar">
+
+    </form>
+  </div>
 </div>

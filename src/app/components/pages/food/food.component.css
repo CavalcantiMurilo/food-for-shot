@@ -67,7 +67,31 @@ img{
   background-color: #fff;
 }
 
-.actions .rm-btn:hover{
+.actions .rm-btn:hover {
   color: #fff;
   background-color: #d22222;
 }
+
+.comments{
+  font-size: 1em;
+  margin-bottom: 2em ;
+  padding: 1.5em 0;
+  width: 50%;
+}
+
+.comments .titulo{
+  text-align: center;
+}
+
+.comment-container{
+  text-align: left;
+  border-bottom: 1px solid;
+  padding: 1em 0;
+}
+
+.comment-username{
+  font-size: 1em;
+}
+
+
+
