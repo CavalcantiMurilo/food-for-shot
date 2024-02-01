@@ -1,27 +1,23 @@
 # FoodForShot
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.0.
+>O presente projeto busca construir uma aplicação que atua como uma rede que tem por finalidade apreciar o que tem de melhor no mundo:  **a comida**. Nele, o usuário é capaz de compartilhar seus pratos, editar, excluir e comentar nos posts da home.
 
-## Development server
+Utilizando do conceito de Single Page Application com Angular e Typescript, Food For Shot foi feito como projeto final do curso de Angular oferecido gratuitamente pelo [Matheus Battisti](https://github.com/matheusbattisti) em seu canal do Youtube Hora de Codar. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Esse é o link do [curso gratuito de Angular](https://youtube.com/playlist?list=PLnDvRpP8Bnex2GQEN0768_AxZg_RaIGmw&si=hwiPcwYB0GtJ_ACx).
 
-## Code scaffolding
+## Rodando o projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+A base do projeto é feita a partir desse repostório que roda juntamente a uma API construída também pelo Matheus Battisti, e que você pode encontrar [aqui](https://github.com/matheusbattisti/curso_adonis_api_yt).
 
-## Build
+- Clone tanto o repositório da API quanto esse aqui.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Com o Angular, node e npm já instalados em sua máquina, faça o clone do projeto Food For Shot e rode o comando `npm install` para fazer a instalação de possíveis dependências do projeto.
 
-## Running unit tests
+- Em relação à API, sua configuração local pode ser feita a partir desse [vídeo](https://youtu.be/xTCBaGeYTck?si=9-T8T2QSl2cP8uzQ).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Agora, é só rodar o projeto!
 
-## Running end-to-end tests
+- Na pasta do projeto Food For Shot rode o comando `ng serve`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Na pasta do projeto de API, rode o comando `node ace serve`.
