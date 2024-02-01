@@ -28,11 +28,15 @@ export class AddFoodComponent {
     formData.append('description', food.description);
     formData.append('image', food.image);
 
-    await this.foodService.createFood(formData).subscribe();
+    await this.foodService.createFood(formData).subscribe(()=>{
 
-    this.messagesService.add("Prato adicionado e pronto para ser apreciado!")
+      this.messagesService.add("Prato adicionado e pronto para ser apreciado!")
 
-    this.router.navigate(['/']);
+      this.router.navigate(['/']);
+
+    });
+
+
 
 
   }

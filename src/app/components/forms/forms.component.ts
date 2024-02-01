@@ -20,7 +20,7 @@ export class FormsComponent implements OnInit{
       id: new FormControl(this.foodData ? this.foodData.id : ''),
       title: new FormControl(this.foodData ? this.foodData.title : '', [Validators.required]),
       description: new FormControl(this.foodData ? this.foodData.description : '', [Validators.required]),
-      image: new FormControl('', [Validators.required]),
+      image: new FormControl(this.foodData ? this.foodData.image : [Validators.required]),
     });
   }
 

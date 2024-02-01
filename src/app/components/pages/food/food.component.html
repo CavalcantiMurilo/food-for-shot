@@ -1,33 +1,33 @@
-<div class="food">
-  <h1>{{ food?.title }}</h1>
+<div class="food" *ngIf="food">
+  <h1>{{ food.title }}</h1>
   <div class="food-container">
 
-    <img src="{{baseApiUrl}}uploads/{{food?.image}}" alt="{{food?.title}}">
+    <img src="{{baseApiUrl}}uploads/{{food.image}}" alt="{{food.title}}">
 
     <div class="sobre-food">
       <h3>Sobre esse prato:</h3>
-      <p>{{ food?.description }}</p>
+      <p>{{ food.description }}</p>
     </div>
   </div>
 
   <div class="actions">
-    <a routerLink="/foods/edit/{{food?.id}}">
+    <a routerLink="/foods/edit/{{food.id}}">
       <fa-icon [icon]="faEdit"></fa-icon>
       Editar
     </a>
 
-    <button class="rm-btn" (click)="removeHandler(food?.id!)">
+    <button class="rm-btn" (click)="removeHandler(food.id!)">
       <fa-icon [icon]="faTimes"></fa-icon>
       Excluir
     </button>
   </div>
 
   <div class="comments">
-    <h3 class="titulo">Comentários ({{ food?.comments!.length > 0 ? food?.comments?.length : 0 }})</h3>
+    <h3 class="titulo">Comentários ({{ food.comments!.length > 0 ? food.comments?.length : 0 }})</h3>
 
-    <div *ngIf="food?.comments!.length > 0; else noComments">
+    <div *ngIf="food.comments!.length > 0; else noComments">
 
-      <div class="comment-container" *ngFor="let comment of food?.comments">
+      <div class="comment-container" *ngFor="let comment of food.comments">
         <p class="comment-text">{{ comment.text }}</p>
         <h3 class="comment-username">{{ comment.username }}</h3>
       </div>

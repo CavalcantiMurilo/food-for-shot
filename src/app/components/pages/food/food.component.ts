@@ -50,11 +50,15 @@ export class FoodComponent implements OnInit{
   }
 
   async removeHandler(id:number){
-    await this.foodService.removeFood(id).subscribe();
+    await this.foodService.removeFood(id).subscribe(()=>{
 
-    this.messagesService.add("Prato excluído com sucesso!")
+      this.messagesService.add("Prato excluído com sucesso!")
 
-    this.router.navigate(['/']);
+      this.router.navigate(['/']);
+
+    });
+
+
   }
 
   async onSubmit(formDirective: FormGroupDirective){
@@ -64,7 +68,7 @@ export class FoodComponent implements OnInit{
 
     const data: Comment = this.commentForm.value;
 
-    data.foodId = Number(this.food!.id);
+    data.momentId = Number(this.food!.id);
 
     await this.commentService.createComment(data).subscribe((comment) => this.food!.comments!.push(comment.data));
 
@@ -78,4 +82,5 @@ export class FoodComponent implements OnInit{
   }
 
 
+  protected readonly Comment = Comment;
 }

@@ -37,11 +37,15 @@ export class EditFoodComponent implements OnInit {
       formData.append('image', foodData.image);
     }
 
-    await this.foodService.updateFood(id!, formData).subscribe()
+    await this.foodService.updateFood(id!, formData).subscribe(() =>{
 
-    this.messagesService.add("Prato atualizado e pronto para ser reapreciado!")
+      this.messagesService.add("Prato atualizado e pronto para ser reapreciado!")
 
-    this.router.navigate(['/'])
+      this.router.navigate(['/'])
+
+      })
+
+
 
 
   }
